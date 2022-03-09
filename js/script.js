@@ -20,4 +20,25 @@ if(playerInput == '1'){
     playerMove = 'nożyce';
 }
 
-printMessage('Twój ruch to: ' + playerMove);
+printMessage('Twój ruch to: ' + playerMove + ', a ruch przeciwnika to: ' + computerMove);
+if (playerMove == 'nieznany ruch'){
+    printMessage('Nie wybrałeś poprawnego ruchu');
+} else if (computerMove == 'kamień' && playerMove == 'kamień'){
+    printMessage('Mamy remis');
+} else if (computerMove == 'kamień' && playerMove =='papier'){
+    printMessage('Wygrałeś!');
+} else if (computerMove == 'kamień' && playerMove == 'nożyce'){
+    printMessage('Przegrałeś!');
+} else if (computerMove == 'papier' && playerMove == 'kamień'){
+    printMessage('Przegrałeś!');
+} else if (computerMove == 'papier' && playerMove == 'papier'){
+    printMessage('Mamy remis');
+} else if (computerMove == 'papier' && playerMove == 'nożyce'){
+    printMessage('Wygrałeś!');
+} else if (computerMove == 'nożyce' && playerMove == 'kamień'){
+    printMessage('Wygrałeś');
+} else if (computerMove == 'nożyce' && playerMove =='papier'){
+    printMessage('Przegrałeś!');
+} else if (computerMove == 'nożyce' && playerMove == 'nożyce'){
+    printMessage('Mamy remis');
+}
