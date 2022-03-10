@@ -1,19 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Kamień, papier, nożyce</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-    <div class="container">
-        <div id="buttons"></div>
-        <div id="messages"></div>
-    </div>
-    <script src="js/functions.js"></script>
-    <script src="js/script.js"></script>
-</body>
-
+    <head>
+        <meta charset="UTF-8" >
+        <title>Kamień Papier Nożyce</title>
+        <link rel="stylesheet" href="sass/style.css" >
+    </head>
+    <body>
+        <div class="container">
+            <h1>ZAGRAJ W KAMIEŃ PAPIER NOŻYCE</h1>
+            <div class="btn" id="buttons">
+                <div>
+                    <img id="play-rock" src="https://cdn.pixabay.com/photo/2015/08/17/01/03/rock-891886_960_720.png" alt="kamień">
+                </div>
+                <div>
+                    <img id="play-paper" src="https://cdn.pixabay.com/photo/2022/01/20/04/57/hand-6951445_960_720.png" alt="papier">
+                </div>
+                <div>
+                    <img id="play-scissors" src="https://cdn.pixabay.com/photo/2017/02/01/12/13/grip-2030010_960_720.png" alt="nożyce">
+                </div>    
+            </div>
+            <div id="messages"></div>
+            <div class="result">
+                <h1 class="rel">WYNIKI:</h1>
+                <div>
+                    <h2 class="win">WYGRANE: <span id="win"></span>!</h2>
+                    <h3 class="draw">REMIS: <span id="draw"></span>!</h3>
+                    <h2 class="lose">PRZEGRANE: <span id="lose"></span>!</h2>
+                </div>
+            </div>
+        </div>
+        <script src="js/functions.js"></script>
+        <script src="js/script.js"></script>
+    </body>
 </html>

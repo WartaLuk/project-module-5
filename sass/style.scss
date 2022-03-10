@@ -1,0 +1,60 @@
+$color-one: rgb(192, 226, 245);
+$color-two: rgb(0, 0, 0);
+$color-three: rgb(235, 235, 83);
+$color-four: rgb(228, 69, 69);
+$color-five: rgb(128, 128, 128);
+$color-six: rgb(41, 38, 199);
+$color-seven: rgb(255, 255, 255);
+$color-eight: rgb(223, 153, 24);
+body {
+    background-color: $color-one;
+    text-align: center;
+    justify-content: center;
+}
+.container {
+    width: 90vw;
+}
+.btn {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 130px 0px;
+    div {
+        position: relative;
+        height: 160px;
+        width: 160px;
+        border: solid 5px $color-two;
+        background-color: $color-three;
+        z-index: 1;
+        border-radius: 50%;
+    }
+    div:first-of-type {
+        background-color: $color-four;
+        border: solid 5px $color-five;
+    }
+    div:last-of-type {
+        background-color: $color-six;
+        border: solid 5px $color-seven;
+    }
+
+}
+img {
+    position: relative;
+    height: 100px;
+    width: 80px;
+    padding: 10px;
+    object-position: center;
+    top: 10%;
+}
+.result div {
+    display: flex;
+    justify-content: space-around;
+}
+#draw {
+    color: $color-eight;
+}
+#lose {
+    color:$color-four;
+}
+#win {
+    color: $color-six;
+}
