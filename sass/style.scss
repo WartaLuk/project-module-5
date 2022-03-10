@@ -17,6 +17,7 @@ body {
 .btn {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap-reverse;
     margin: 130px 0px;
     div {
         position: relative;
@@ -48,6 +49,7 @@ img {
 .result div {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 #draw {
     color: $color-eight;
@@ -57,4 +59,53 @@ img {
 }
 #win {
     color: $color-six;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .btn {
+        margin: 100px 0px;
+        div {
+            height: 140px;
+            width: 140px;
+        }
+    }
+    .imagebox {
+        width: 40%;
+        margin-bottom: 12px;
+    }
+    img {
+        height: 90px;
+        width: 70px;
+    }
+}
+h1 {
+    font-size: 1.7em;
+}
+h2 {
+    font-size: 1.3em;
+}
+
+
+@media (max-width: 767px) {
+    .btn {
+        margin: 80px 0px;
+        div {
+            height: 120px;
+            width: 120px;
+        }
+    }
+    .imagebox {
+        width: 90%;
+        margin-bottom: 8px;
+    }
+    img {
+        height: 80px;
+        width: 60px;
+    }
+}
+h1 {
+    font-size: 1.4em;
+}
+h2, h3 {
+    font-size: 1.10em;
 }
