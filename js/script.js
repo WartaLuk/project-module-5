@@ -7,6 +7,14 @@
     let win = 0;
     let lose = 0;
     let draw = 0;
+
+    const spanRock = document.getElementById("rock");
+    const spanPaper = document.getElementById("paper");
+    const spanScissors = document.getElementById("scissors");
+  
+    let rockCount = 0;
+    let paperCount = 0;
+    let scissorsCount = 0;
   
     const playGame = function (argPlayerInput) {
       clearMessages();
@@ -39,30 +47,47 @@
       printMessage("Twój ruch to: " + playerMove);
   
       const displayResult = function (argComputerMove, argPlayerMove) {
-        if (computerMove == "kamień" && playerMove == "papier") {
+        if (computerMove == "kamień" && playerMove === "papier") {
           win++;
           printMessage("Ty wygrywasz!");
-        } else if (computerMove == "papier" && playerMove == "nożyce") {
+        } else if (computerMove === "papier" && playerMove === "nożyce") {
           win++;
           printMessage("Ty wygrywasz!");
-        } else if (computerMove == "nożyce" && playerMove == "kamień") {
+        } else if (computerMove === "nożyce" && playerMove === "kamień") {
           win++;
           printMessage("Ty wygrywasz!");
-        } else if (computerMove == playerMove) {
+        } else if (computerMove === playerMove) {
           draw++;
           printMessage("REMIS");
         } else {
           lose++;
           printMessage("Przegrałeś!");
         }
-          
+      
   
-        spanWin.textContent = " " + win;
-        spanDraw.textContent = " " + draw;
-        spanLose.textContent = " " + lose;
+        spanWin.textContent = " " + win + "!";
+        spanDraw.textContent = " " + draw + "!";
+        spanLose.textContent = " " + lose + "!";
       }
   
       displayResult(computerMove, playerMove);
+
+      const displayCount = function (argPlayerMove) {
+        if (playerMove === "papier") {
+          paperCount++;
+        } else if (playerMove === "nożyce") {
+          scissorsCount++;
+        } else {
+          rockCount++;
+        }
+      
+  
+        spanRock.textContent = " " + rockCount;
+        spanPaper.textContent = " " + paperCount;
+        spanScissors.textContent = " " + scissorsCount;
+      }
+  
+      displayCount(playerMove);
     }
   
     document.getElementById("play-rock").addEventListener("click", function () {

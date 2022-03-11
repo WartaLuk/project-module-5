@@ -44,6 +44,16 @@ img {
   top: 10%;
 }
 
+.scores {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.result {
+  width: 60%;
+}
+
 .result div {
   display: flex;
   justify-content: space-around;
@@ -62,6 +72,16 @@ img {
   color: #2926c7;
 }
 
+.count {
+  width: 40%;
+}
+
+.count div {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
 @media (min-width: 768px) and (max-width: 991px) {
   .btn {
     margin: 100px 0px;
@@ -78,14 +98,18 @@ img {
     height: 90px;
     width: 70px;
   }
-}
-
-h1 {
-  font-size: 1.7em;
-}
-
-h2 {
-  font-size: 1.3em;
+  h1 {
+    font-size: 1.7em;
+  }
+  h2 {
+    font-size: 1.3em;
+  }
+  .result {
+    width: 100%;
+  }
+  .count {
+    width: 80%;
+  }
 }
 
 @media (max-width: 767px) {
@@ -104,12 +128,16 @@ h2 {
     height: 80px;
     width: 60px;
   }
-}
-
-h1 {
-  font-size: 1.4em;
-}
-
-h2, h3 {
-  font-size: 1.10em;
+  h1 {
+    font-size: 1.4em;
+  }
+  h2, h3 {
+    font-size: 1.10em;
+  }
+  .result {
+    width: 100%;
+  }
+  .count {
+    width: 90%;
+  }
 }

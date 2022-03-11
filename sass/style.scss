@@ -46,10 +46,18 @@ img {
     object-position: center;
     top: 10%;
 }
-.result div {
+.scores {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.result {
+    width: 60%;
+    div {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    }
 }
 #draw {
     color: $color-eight;
@@ -60,6 +68,15 @@ img {
 #win {
     color: $color-six;
 }
+.count {
+    width: 40%;
+    div {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    }
+}
+
 
 @media (min-width: 768px) and (max-width: 991px) {
     .btn {
@@ -77,14 +94,19 @@ img {
         height: 90px;
         width: 70px;
     }
+    h1 {
+        font-size: 1.7em;
+    }
+    h2 {
+        font-size: 1.3em;
+    }
+    .result {
+        width: 100%;
+    }
+    .count {
+        width: 80%;
+    }
 }
-h1 {
-    font-size: 1.7em;
-}
-h2 {
-    font-size: 1.3em;
-}
-
 
 @media (max-width: 767px) {
     .btn {
@@ -102,10 +124,16 @@ h2 {
         height: 80px;
         width: 60px;
     }
-}
-h1 {
-    font-size: 1.4em;
-}
-h2, h3 {
-    font-size: 1.10em;
+    h1 {
+        font-size: 1.4em;
+    }
+    h2, h3 {
+        font-size: 1.10em;
+    }
+    .result {
+        width: 100%;
+    }
+    .count {
+        width: 90%;
+    }
 }
